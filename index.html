@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memory game</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="control">
+        <div class="alert">Enter your name</div>
+        <input type="text" placeholder="What is your name">
+        <button>start game</button>
+    </div>
+    <div class="container">
+        <div class="info-container">
+            <div class="name">
+                welcome: <span></span>
+            </div>
+            <div class="time">
+                time: <span>0:0</span>
+            </div>
+            <div class="tries">
+                wrong tries: <span>0</span>
+            </div>
+        </div>
+        <div class="memory-game-blocks">
+            <div class="game-block" data-language="css">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/css-3.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="css">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/css-3.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="cpp">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/c-.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="cpp">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/c-.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="github">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/github.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="github">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/github.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="git">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/git.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="git">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/git.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="java">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/java.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="java">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/java.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="js">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/js.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="js">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/js.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="react">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/react.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="react">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/react.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="swift">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/swift.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="swift">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/swift.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="bootstrap">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/bootstrap.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="bootstrap">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/bootstrap.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="vs-code">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/visual-studio.png" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-language="vs-code">
+                <div class="face front"><i class="fa-solid fa-question"></i></div>
+                <div class="face back">
+                    <img src="imgs/visual-studio.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="results">
+        <h4>results</h4>
+        <div class="content">
+            <p>wrong attempts: <span class="wrong">0</span></p>
+            <p>time spent: <span class="spent"></span></p>
+        </div>
+        <button>Try again</button>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
