@@ -1,2 +1,2 @@
 # memory-game
-Memory game using javaScript
+Game creation course: https://youtu.be/KRj4DFBTBkA
