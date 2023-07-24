@@ -96,7 +96,7 @@ function check(firstBlock, secondBlock){
         firstBlock.style.pointerEvents = "none";
         secondBlock.style.pointerEvents = "none";
         allOPen++;
-        if(allOPen === 1){
+        if(allOPen === 10){
             clearInterval(timeFunction)
             setTimeout(() => {
                 results.classList.add("active");
