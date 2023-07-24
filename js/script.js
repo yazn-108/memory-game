@@ -1,9 +1,9 @@
 "use strict";
 let input = document.querySelector(".control input");
-let start = document.querySelector(".control button");
-let playerName = document.querySelector(".name span"); 
-let time = document.querySelector(".time span");
-let tries = document.querySelector(".tries span");
+let start = document.querySelector(".control form button");
+let playerName = document.querySelector(".name span.value"); 
+let time = document.querySelector(".time span.value");
+let tries = document.querySelector(".tries span.value");
 let duration = 1000;
 let seconds = 0;
 let minutes = 0;
@@ -15,11 +15,13 @@ let alert = document.querySelector(".control .alert");
 let results = document.querySelector(".results");
 let results_wrong = document.querySelector(".results .wrong");
 let results_spent = document.querySelector(".results .spent");
-let resultsButton = document.querySelector(".results button");
+let resultsButton = document.querySelector(".results button.next");
+let resetButton = document.querySelector(".results button.reset");
 let allOPen = 0;
 function startPage(){
-    start.parentElement.remove();
-        timeFunction = setInterval(function(){
+    start.parentElement.parentElement.remove();
+        if(duration !== 0){
+            timeFunction = setInterval(function(){
                 seconds++;
                 if(seconds === 60){
                     seconds = 0;
@@ -33,8 +35,10 @@ function startPage(){
                     blocksContainer.children[index].classList.remove("is-flipped");
             });
         }, duration);
+        }
 }
-start.addEventListener("click", () =>{
+start.addEventListener("click", (e) =>{
+    e.preventDefault();
     if(input.value !== ""){
         sessionStorage.setItem("playerName", input.value);
         playerName.innerHTML = sessionStorage.getItem("playerName");
@@ -44,7 +48,7 @@ start.addEventListener("click", () =>{
         setTimeout(() => {
             alert.classList.remove("active");
         }, 2200);
-    };
+    }; 
 });
 if(sessionStorage.getItem("playerName") !== null){
     playerName.innerHTML = sessionStorage.getItem("playerName");
@@ -92,7 +96,7 @@ function check(firstBlock, secondBlock){
         firstBlock.style.pointerEvents = "none";
         secondBlock.style.pointerEvents = "none";
         allOPen++;
-        if(allOPen === 10){
+        if(allOPen === 1){
             clearInterval(timeFunction)
             setTimeout(() => {
                 results.classList.add("active");
@@ -100,6 +104,7 @@ function check(firstBlock, secondBlock){
                 results_spent.innerHTML = `${minutes}:${seconds}`;
                 blocks.forEach((block) => {
                     block.classList.remove('has-match');
+                    block.style.pointerEvents = "none";
                 });
             },duration);
         };
@@ -113,5 +118,9 @@ function check(firstBlock, secondBlock){
 };
 resultsButton.addEventListener("click",() => {
     window.location.reload();
-    
+});
+resetButton.addEventListener("click",() => {
+    sessionStorage.clear();
+    document.body.appendChild(start.parentElement.parentElement)
+    duration = 0;
 });

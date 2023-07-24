@@ -10,20 +10,22 @@
 </head>
 <body>
     <div class="control">
+        <form action="">
         <div class="alert">Enter your name</div>
-        <input type="text" placeholder="What is your name">
-        <button>start game</button>
+            <input type="text" placeholder="What is your name">
+            <button>start game</button>
+        </form>
     </div>
     <div class="container">
         <div class="info-container">
             <div class="name">
-                welcome: <span></span>
+                <span>welcome:</span> <span class="value"></span>
             </div>
             <div class="time">
-                time: <span>0:0</span>
+                time: <span class="value">0:0</span>
             </div>
             <div class="tries">
-                wrong tries: <span>0</span>
+                wrong tries: <span class="value">0</span>
             </div>
         </div>
         <div class="memory-game-blocks">
@@ -155,7 +157,8 @@
             <p>wrong attempts: <span class="wrong">0</span></p>
             <p>time spent: <span class="spent"></span></p>
         </div>
-        <button>Try again</button>
+        <button class="next">Try again</button>
+        <button class="reset">change my name</button>
     </div>
 <script src="js/script.js"></script>
 </body>

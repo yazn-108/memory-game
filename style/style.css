@@ -21,8 +21,6 @@ button{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 5px;
-    flex-direction: column;
     align-items: center;
     justify-content: center;}
 .control .alert{
@@ -37,6 +35,12 @@ button{
     animation: alert .4s  0s  1 ease-in-out;}
 @keyframes alert {from{top: -100%;} to{top: 1%;}}
 .control .alert.active{display: block;}
+.control form{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
 .control input{
     background-color: #333;
     color: white;
@@ -51,6 +55,7 @@ button{
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 4px;
+    outline: none;
     font-size: 1.2rem;}
 .container{
     display: grid;
@@ -72,6 +77,12 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;}
+@media (max-width:576px){
+    .info-container div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;}}
 .memory-game-blocks{
     width: 100%;
     height: 100%;
@@ -138,6 +149,8 @@ button{
 .results.active{display: flex;}
 @media (max-width:768) {.results{width: 80%;}}
 @media (max-width:576px) {
+    button{cursor: default;}
+    .results{width: 100%;}
     .results .content{
         flex-direction: column;
         gap: 10px;}}
